@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtWidgetGLClass</class>
+ <widget class="QMainWindow" name="QtWidgetGLClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>582</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtWidgetGL</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>user.png</normaloff>user.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+	background-color:rgb(68,68,68)color:
+	rgb(255,255,255);
+	font: 10pt&quot;幼圆&quot;
+}
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>72</width>
+    <height>72</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="WPOpenGLWidget" name="openGLWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>720</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar{
+	background-color:rgb(200,200, 200);
+	color:rgb(60, 60, 60);
+}</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>查看</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>设置</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="atDrawTriangle"/>
+   <addaction name="actionDrawRectangle"/>
+   <addaction name="actionClear"/>
+   <addaction name="actionWrieframe"/>
+   <addaction name="atColorChange"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDrawRectangle">
+   <property name="text">
+    <string>画矩形</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>清空屏幕</string>
+   </property>
+  </action>
+  <action name="actionWrieframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>线框模式</string>
+   </property>
+  </action>
+  <action name="atColorChange">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>颜色动态变化</string>
+   </property>
+  </action>
+  <action name="atDrawTriangle">
+   <property name="text">
+    <string>三角形</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WPOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">wpopenglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="QtWidgetGL.qrc"/>
+ </resources>
+ <connections/>
+</ui>
